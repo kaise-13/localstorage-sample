@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { useState } from "react";
 import { Header } from "./Header";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import './newSite.scss';
 
 export const NewSite: FC = () => {
   const navigate = useNavigate();
@@ -43,6 +44,9 @@ export const NewSite: FC = () => {
           <input type="text" onChange={handleUrlOnChange} />
           <br />
           <button onClick={saveWebPage}>webページ保存</button>
+        </div>
+        <div className="link">
+          <Link to={"/"}>ホーム</Link>
         </div>
       </main>
     </div>
